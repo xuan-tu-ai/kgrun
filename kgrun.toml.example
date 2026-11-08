@@ -1,0 +1,8 @@
+# kgrun configuration file
+kernel      = "huytu2025/fish-training-m3"
+accelerator = "NvidiaTeslaT4"
+timeout_h   = 11
+internet    = true
+datasets    = ["huytu2025/fish-freshness-images"]
+include     = ["*.py", "src/**", "configs/**", "requirements*.txt"]
+exclude     = ["venv/**", ".venv/**", "data/**", "runs/**", "**/__pycache__/**", ".git/**", ".kgrun/**"]
