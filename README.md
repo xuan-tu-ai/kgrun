@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ kgrun
+# kgrun
 
 ### Run Python scripts on remote Kaggle GPUs directly from your local IDE.
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 💡 Why kgrun?
+## Why kgrun?
 
 Developing deep learning models on a laptop or thin client without an NVIDIA GPU is frustrating:
 
@@ -33,19 +33,19 @@ Developing deep learning models on a laptop or thin client without an NVIDIA GPU
 
 ---
 
-## ✨ Features
+## Features
 
-* 🚀 **Zero Server Provisioning:** No VPS, no cloud credit card, no SSH keys. Uses your existing Kaggle account.
-* 📦 **Automatic Multi-File Packaging:** Bundles local modules (`src/**`, `configs/**`, helper scripts) and injects them onto the remote host automatically.
-* ⚡ **Live SSE Log Streaming:** Real-time stdout and stderr streamed line-by-line to your terminal with `kaggle kernels logs -f`.
-* 🛡️ **Detachable & Resilient:** Press `Ctrl+C` to detach at any time. Your job continues running on Kaggle uninterrupted.
-* 📂 **Dataset Management:** Upload local datasets with `kgrun data push DIR` and automatically mount them in remote sessions.
-* 💾 **Auto-Pull Artifacts:** Download weights, logs, and metric CSVs directly into `runs/<timestamp>/` with `--pull`.
-* 🔬 **Reproducibility Stamp:** Generates a complete snapshot (`kgrun_stamp.json`) logging CUDA hardware, PyTorch/driver versions, git/code hash, and CLI arguments.
+* **Zero Server Provisioning:** No VPS, no cloud credit card, no SSH keys. Uses your existing Kaggle account.
+* **Automatic Multi-File Packaging:** Bundles local modules (`src/**`, `configs/**`, helper scripts) and injects them onto the remote host automatically.
+* **Live SSE Log Streaming:** Real-time stdout and stderr streamed line-by-line to your terminal with `kaggle kernels logs -f`.
+* **Detachable & Resilient:** Press `Ctrl+C` to detach at any time. Your job continues running on Kaggle uninterrupted.
+* **Dataset Management:** Upload local datasets with `kgrun data push DIR` and automatically mount them in remote sessions.
+* **Auto-Pull Artifacts:** Download weights, logs, and metric CSVs directly into `runs/<timestamp>/` with `--pull`.
+* **Reproducibility Stamp:** Generates a complete snapshot (`kgrun_stamp.json`) logging CUDA hardware, PyTorch/driver versions, git/code hash, and CLI arguments.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
  local machine (vs code / terminal)                 remote kaggle cloud
@@ -74,7 +74,7 @@ Developing deep learning models on a laptop or thin client without an NVIDIA GPU
 
 ---
 
-## ⚡ 30-Second Quickstart
+## 30-Second Quickstart
 
 ### 1. Prerequisites
 * **Python 3.11+** installed.
@@ -120,7 +120,7 @@ kgrun run train.py --epochs 30 --batch-size 64 --pull
 
 ---
 
-## 📖 CLI Reference
+## CLI Reference
 
 | Command | Description |
 |---|---|
@@ -139,7 +139,7 @@ kgrun run train.py --epochs 30 --batch-size 64 --pull
 
 ---
 
-## ⚙️ Configuration (`kgrun.toml`)
+## Configuration (`kgrun.toml`)
 
 `kgrun` is project-scoped. Everything is configured in `kgrun.toml` at your project root:
 
@@ -171,7 +171,7 @@ exclude     = ["venv/**", ".venv/**", "data/**", "runs/**", "**/__pycache__/**",
 
 ---
 
-## 📊 Technical Limits & Best Practices
+## Technical Limits & Best Practices
 
 * **Inline Script Size (1 MiB Limit):** The Kaggle API enforces a strict **1 MiB (1,048,576 bytes)** limit on code uploads. `kgrun` automatically enforces a **750 KB** threshold on the compressed `tar.gz` archive to guarantee the base64-embedded payload stays under the limit. Keep data and weights out of `include`!
 * **Container Boot Time:** Kaggle virtual machine provisioning takes approximately 1 to 2 minutes before the script starts. Test on 1 batch locally before pushing long jobs.
@@ -179,7 +179,7 @@ exclude     = ["venv/**", ".venv/**", "data/**", "runs/**", "**/__pycache__/**",
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 kgrun/
@@ -203,7 +203,7 @@ kgrun/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions make the open-source community an amazing place to learn, inspire, and create! Any contributions you make are **greatly appreciated**.
 
@@ -211,7 +211,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on setting up your loc
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
 
